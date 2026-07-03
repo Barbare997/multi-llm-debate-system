@@ -1,0 +1,167 @@
+[
+  {
+    "id": "dataset2_01",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2019",
+    "source": "2019 AIME I #1",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2019_AIME_I_Problems/Problem_1",
+    "statement": "Consider the integer N = 9 + 99 + 999 + 9999 + ... + T, where T is the 321-digit number consisting of all 9s. Find the sum of the digits of N.",
+    "ground_truth_answer": "342",
+    "solution_reference": "Write N = (10-1) + (10^2-1) + ... + (10^321-1) = 10 + 10^2 + ... + 10^321 - 321 = 1110 - 321 + 10^4 + 10^5 + ... + 10^321 = 789 + 10^4 + 10^5 + ... + 10^321. The sum of digits is 7 + 8 + 9 + (321 - 3) = 342."
+  },
+  {
+    "id": "dataset2_02",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2024",
+    "source": "2024 AIME II #1",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2024_AIME_II_Problems/Problem_1",
+    "statement": "Among the 900 residents of Aimeville, there are 195 who own a diamond ring, 367 who own a set of golf clubs, and 562 who own a garden spade. In addition, each of the 900 residents owns a bag of candy hearts. There are 437 residents who own exactly two of these things, and 234 residents who own exactly three of these things. Find the number of residents of Aimeville who own all four of these things.",
+    "ground_truth_answer": "73",
+    "solution_reference": "Let x be the number owning all four items and y the number owning only candy hearts. Then 195+367+562+900 = y + 2*437 + 3*234 + 4x and y+437+234+x = 900. Subtracting gives 3x = 219, so x = 73."
+  },
+  {
+    "id": "dataset2_03",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2021",
+    "source": "2021 AIME I #1",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2021_AIME_I_Problems/Problem_1",
+    "statement": "Zou and Chou are practicing their 100-meter sprints by running 6 races against each other. Zou wins the first race, and after that, the probability that one of them wins a race is 2/3 if they won the previous race but only 1/3 if they lost the previous race. The probability that Zou will win exactly 5 of the 6 races is m/n, where m and n are relatively prime positive integers. Find m+n.",
+    "ground_truth_answer": "97",
+    "solution_reference": "Zou wins 5 of 6 iff the last-five record is WWWWL, WWWLW, WWLWW, WLWWW, or LWWWW. The first case has one switch and probability (1/3)(2/3)^4; the other four have two switches and probability 4(1/3)^2(2/3)^3. Total probability is 16/81, so m + n = 16 + 81 = 97."
+  },
+  {
+    "id": "dataset2_04",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2017",
+    "source": "2017 AIME I #1",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2017_AIME_I_Problems/Problem_1",
+    "statement": "Fifteen distinct points are designated on triangle ABC: the 3 vertices A, B, and C; 3 other points on side AB; 4 other points on side BC; and 5 other points on side CA. Find the number of triangles with positive area whose vertices are among these 15 points.",
+    "ground_truth_answer": "390",
+    "solution_reference": "There are C(15,3) = 455 triples of points. Subtract collinear triples on each side: C(5,3) + C(6,3) + C(7,3) = 10 + 20 + 35 = 65. Answer: 455 - 65 = 390."
+  },
+  {
+    "id": "dataset2_05",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2018",
+    "source": "2018 AIME I #3",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2018_AIME_I_Problems/Problem_3",
+    "statement": "Kathy has 5 red cards and 5 green cards. She shuffles the 10 cards and lays out 5 of the cards in a row in a random order. She will be happy if and only if all the red cards laid out are adjacent and all the green cards laid out are adjacent. For example, card orders RRGGG, GGGGR, or RRRRR will make Kathy happy, but RRRGR will not. The probability that Kathy will be happy is m/n, where m and n are relatively prime positive integers. Find m+n.",
+    "ground_truth_answer": "157",
+    "solution_reference": "Condition on the first card being red. The valid completions are RRRRR, RRRRG, RRRGG, RRGGG, and RGGGG. Summing their probabilities gives 31/126, so m + n = 31 + 126 = 157."
+  },
+  {
+    "id": "dataset2_06",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2020",
+    "source": "2020 AIME I #2",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2020_AIME_I_Problems/Problem_2",
+    "statement": "There is a unique positive real number x such that the three numbers log base 8 of (2x), log base 4 of x, and log base 2 of x, in that order, form a geometric progression with positive common ratio. The number x can be written as m/n, where m and n are relatively prime positive integers. Find m+n.",
+    "ground_truth_answer": "17",
+    "solution_reference": "The common ratio of log_4(x) to log_8(2x) is 2, so log_4(x)/log_8(2x) = 3/2. This simplifies to 4 + 4*log_2(x) = 3*log_2(x), hence log_2(x) = -4 and x = 1/16. Therefore m + n = 1 + 16 = 17."
+  },
+  {
+    "id": "dataset2_07",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2016",
+    "source": "2016 AIME I #1",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2016_AIME_I_Problems/Problem_1",
+    "statement": "For -1 < r < 1, let S(r) denote the sum of the geometric series 12 + 12r + 12r^2 + 12r^3 + .... Let a between -1 and 1 satisfy S(a)*S(-a) = 2016. Find S(a) + S(-a).",
+    "ground_truth_answer": "336",
+    "solution_reference": "S(a) + S(-a) = 12/(1-a) + 12/(1+a) = 24/(1-a^2) = (1/6)*S(a)*S(-a). Hence S(a) + S(-a) = 2016/6 = 336."
+  },
+  {
+    "id": "dataset2_08",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2020",
+    "source": "2020 AIME I #3",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2020_AIME_I_Problems/Problem_3",
+    "statement": "A positive integer N has base-eleven representation abc (digits a, b, c) and base-eight representation 1bca (digits 1, b, c, a), where a, b, and c represent not necessarily distinct digits. Find the least such N expressed in base ten.",
+    "ground_truth_answer": "621",
+    "solution_reference": "Equating values gives 121a + 11b + c = 512 + 64b + 8c + a, so 120a - 53b - 7c = 512. Trying the smallest valid digit a = 5 gives 88 = 53b + 7c, which works for b = 1, c = 5. Thus N = 515 in base 11 equals 621 in base 10."
+  },
+  {
+    "id": "dataset2_09",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2018",
+    "source": "2018 AIME I #2",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2018_AIME_I_Problems/Problem_2",
+    "statement": "The number n can be written in base 14 as abc (digits a, b, c), can be written in base 15 as acb, and can be written in base 6 as acac, where a > 0. Find the base-10 representation of n.",
+    "ground_truth_answer": "925",
+    "solution_reference": "Equating base-14 and base-15 forms gives 196a + 14b + c = 225a + 15c + b. Equating base-15 and base-6 forms gives 225a + 15c + b = 216a + 36c + 6a + c. Solving with digit constraints yields a = 4, c = 1, b = 10, so n = 925."
+  },
+  {
+    "id": "dataset2_10",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2019",
+    "source": "2019 AIME I #2",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2019_AIME_I_Problems/Problem_2",
+    "statement": "Jenn randomly chooses a number J from 1, 2, 3, ..., 20. Bela then randomly chooses a number B from 1, 2, 3, ..., 20 distinct from J. The value of B - J is at least 2 with a probability that can be expressed in the form m/n, where m and n are relatively prime positive integers. Find m+n.",
+    "ground_truth_answer": "29",
+    "solution_reference": "There are C(20,2) = 190 equally likely ordered pairs. Exactly 19 pairs differ by less than 2, so P(|B-J| >= 2) = 9/10. By symmetry P(B-J >= 2) = (1/2)(9/10) = 9/20, hence m + n = 9 + 20 = 29."
+  },
+  {
+    "id": "dataset2_11",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2016",
+    "source": "2016 AIME I #2",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2016_AIME_I_Problems/Problem_2",
+    "statement": "Two dice appear to be standard dice with faces numbered 1 through 6, but each die is weighted so that the probability of rolling k is directly proportional to k. The probability of rolling a 7 with this pair of dice is m/n, where m and n are relatively prime positive integers. Find m+n.",
+    "ground_truth_answer": "71",
+    "solution_reference": "On one die P(k) = k/21. Summing over pairs with total 7 gives (1*6 + 2*5 + 3*4 + 4*3 + 5*2 + 6*1)/441 = 56/441 = 8/63, so m + n = 8 + 63 = 71."
+  },
+  {
+    "id": "dataset2_12",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2015",
+    "source": "2015 AIME I #1",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2015_AIME_I_Problems/Problem_1",
+    "statement": "The expression A = 1*2 + 3*4 + 5*6 + ... + 37*38 + 39 and B = 1 + 2*3 + 4*5 + ... + 36*37 + 38*39 are obtained by writing multiplication and addition operators in an alternating pattern between successive integers. Find the positive difference between integers A and B.",
+    "ground_truth_answer": "722",
+    "solution_reference": "Telescoping gives B - A = -38 + 4(1 + 2 + ... + 19) = -38 + 4(190) = 722."
+  },
+  {
+    "id": "dataset2_13",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2015",
+    "source": "2015 AIME I #2",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2015_AIME_I_Problems/Problem_2",
+    "statement": "The nine delegates to the Economic Cooperation Conference include 2 officials from Mexico, 3 officials from Canada, and 4 officials from the United States. During the opening session, three of the delegates fall asleep. Assuming the three sleepers were determined randomly, the probability that exactly two of the sleepers are from the same country is m/n, where m and n are relatively prime positive integers. Find m+n.",
+    "ground_truth_answer": "139",
+    "solution_reference": "There are C(9,3) = 84 equally likely triples. Favorable counts are C(4,2)*5 + C(3,2)*6 + C(2,2)*7 = 30 + 18 + 7 = 55. Probability is 55/84, so m + n = 55 + 84 = 139."
+  },
+  {
+    "id": "dataset2_14",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2021",
+    "source": "2021 AIME I #3",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2021_AIME_I_Problems/Problem_3",
+    "statement": "Find the number of positive integers less than 1000 that can be expressed as the difference of two integral powers of 2.",
+    "ground_truth_answer": "50",
+    "solution_reference": "Each such N = 2^x - 2^y has a unique representation with x > y >= 0. For x = 1,...,9 there are x choices for y; for x = 10 there are 5 choices with y = 5,...,9. Total: 1+2+...+9+5 = 50."
+  },
+  {
+    "id": "dataset2_15",
+    "subject": "math",
+    "question_type": "answer",
+    "year": "2020",
+    "source": "2020 AIME I #4",
+    "source_url": "https://artofproblemsolving.com/wiki/index.php/2020_AIME_I_Problems/Problem_4",
+    "statement": "Let S be the set of positive integers N with the property that the last four digits of N are 2020, and when the last four digits are removed, the result is a divisor of N. For example, 42,020 is in S because 4 is a divisor of 42,020. Find the sum of all the digits of all the numbers in S.",
+    "ground_truth_answer": "93",
+    "solution_reference": "Write N = 10000m + 2020 = km for positive integers k and m, so m divides 2020. The 12 divisors of 2020 each contribute one valid N; summing digit sums of those divisors plus 12 copies of the digit sum of 2020 gives 93."
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "single": {
+    "final_answer": "",
+    "solution": "Let R denote a red card and G denote a green card. Kathy has 5 red cards and 5 green cards, for a total of 10 distinct cards (e.g., R1, R2, ..., R5, G1, G2, ..., G5). She lays out 5 of these cards in a row in a random order.\n\nThe total number of ways to choose and arrange 5 distinct cards from 10 distinct cards is given by the permutation formula P(10, 5):\nTotal outcomes = P(10, 5) = 10 * 9 * 8 * 7 * 6 = 30,240.\n\nKathy is happy if and only if all the red cards laid out are adjacent and",
+    "correct": false
+  },
+  "voting": {
+    "final_answer": "22",
+    "votes": [
+      "131",
+      "22",
+      ""
+    ],
+    "details": [
+      {
+        "backend": "openai_mini",
+        "final_answer": "131",
+        "solution": "To solve the problem, we first need to determine the total number of ways to choose and arrange 5 cards from the 10 cards (5 red and 5 green). \n\n1. **Total arrangements of 5 cards from 10**: \n   The total number of ways to choose 5 cards from 10 is given by the combination formula \\( \\binom{n}{k} \\), where \\( n \\) is the total number of items to choose from, and \\( k \\) is the number of items to choose. Here, \\( n = 10 \\) and \\( k = 5 \\):\n   \\[\n   \\binom{10}{5} = \\frac{10!}{5!5!} = 252\n   \\]\n\n2. **Arrangements that make Kathy happy**:\n   Kathy will be happy if all the red cards are adjacent and all the green cards are adjacent. This means we can treat the group of red cards as one block and the group of green cards as another block. \n\n   - There are two possible arrangements of these blocks: (Red block, Green block) or (Green block, Red block).\n   - Each block can contain either all 5 cards of one color or a combination of 1 to 5 cards of that color, but they must be adjacent.\n\n   We can consider the following cases based on how many red cards are chosen:\n   - **Case 1**: 5 red cards and 0 green cards (RRRRR)\n   - **Case 2**: 4 red cards and 1 green card (RRRRG)\n   - **Case 3**: 3 red cards and 2 green cards (RRRGG)\n   - **Case 4**: 2 red cards and 3 green cards (RRGGG)\n   - **Case 5**: 1 red card and 4 green cards (RRGGG)\n   - **Case 6**: 0 red cards and 5 green cards (GGGGG)\n\n   For each case, we can calculate the arrangements:\n   - **Case 1**: 1 arrangement (RRRRR)\n   - **Case 2**: 2 arrangements (RRRRG, GGGGR)\n   - **Case 3**: 2 arrangements (RRRGG, GGGGR)\n   - **Case 4**: 2 arrangements (RRGGG, GGGGR)\n   - **Case 5**: 2 arrangements (RRGGG, GGGGR)\n   - **Case 6**: 1 arrangement (GGGGG)\n\n   The total arrangements that make Kathy happy are:\n   \\[\n   1 + 2 + 2 + 2 + 2 + 1 = 10\n   \\]\n\n3. **Calculating the probability**:\n   The probability that Kathy will be happy is the number of happy arrangements divided by the total arrangements:\n   \\[\n   P(\\text{happy}) = \\frac{10}{252} = \\frac{5}{126}\n   \\]\n\n4. **Finding \\( m+n \\)**:\n   Here, \\( m = 5 \\) and \\( n = 126 \\). Since 5 and 126 are relatively prime, we can find \\( m+n \\):\n   \\[\n   m+n = 5 + 126 = 131\n   \\]\n\nThus, the final answer is:\n\nFINAL_ANSWER:\n131",
+        "correct": false
+      },
+      {
+        "backend": "openai_strong",
+        "final_answer": "22",
+        "solution": "To solve this problem, we need to determine the probability that when Kathy lays out 5 cards from a shuffled deck of 5 red and 5 green cards, all the red cards laid out are adjacent and all the green cards laid out are adjacent.\n\nFirst, calculate the total number of ways to choose 5 cards from the 10 cards. This is given by the combination:\n\n\\[\n\\binom{10}{5} = 252\n\\]\n\nNext, we need to count the number of favorable outcomes where all red cards or all green cards are adjacent.",
+        "correct": false
+      },
+      {
+        "backend": "gemini",
+        "final_answer": "",
+        "solution": "Let R denote a red card and G denote a green card.\nKathy has 5 distinct red cards (R1, R2, R3, R4, R5) and 5 distinct green cards (G1, G2, G3, G4, G5).\nShe lays out 5 of the 10 cards in a row in a random order. The total number of possible arrangements is the number of permutations of 10 distinct cards taken 5 at a time, P(10, 5).\nP(10, 5) = 10 * 9 * 8 * 7 * 6 = 30,240.\n\nKathy is happy if and only if all the red cards laid out are adjacent and all the",
+        "correct": false
+      }
+    ],
+    "correct": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "single": {
+    "final_answer": "1. The",
+    "solution": "Let the three-digit positive integer be $N$.\nIts decimal representation is $abc$, so $N = 100a + 10b + c$.\nSince it is a three-digit integer, $a \\in \\{1, 2, \\dots, 9\\}$, and $b, c \\in \\{0, 1, \\dots, 9\\}$.\n\nIts base-nine representation has digits $b, c, a$. This means $N = b \\cdot 9^2 + c \\cdot 9^1 + a \\cdot 9^0$.\nSo $N = 81b + 9c + a$.\nFor the base-nine representation $(bca)_9$ to be valid:\n1. The",
+    "correct": false
+  },
+  "voting": {
+    "final_answer": "683",
+    "votes": [
+      "683",
+      "227",
+      "For $bca_9$ to be a valid base-nine representation, its digits $b, c,"
+    ],
+    "details": [
+      {
+        "backend": "openai_mini",
+        "final_answer": "683",
+        "solution": "683",
+        "correct": false
+      },
+      {
+        "backend": "openai_strong",
+        "final_answer": "227",
+        "solution": "The three-digit positive integer is 227.",
+        "correct": true
+      },
+      {
+        "backend": "gemini",
+        "final_answer": "For $bca_9$ to be a valid base-nine representation, its digits $b, c,",
+        "solution": "Let the three-digit positive integer be $N$. Its decimal representation is $abc$, so $N = 100a + 10b + c$.\nSince it is a three-digit integer, $a \\in \\{1, 2, \\dots, 9\\}$ and $b, c \\in \\{0, 1, \\dots, 9\\}$.\n\nIts base-nine representation has digits $b, c, a$. This means $N = b \\cdot 9^2 + c \\cdot 9^1 + a \\cdot 9^0$.\nSo $N = 81b + 9c + a$.\n\nFor $bca_9$ to be a valid base-nine representation, its digits $b, c,",
+        "correct": false
+      }
+    ],
+    "correct": false
+  }
+}

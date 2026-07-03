@@ -1,0 +1,36 @@
+{
+  "single": {
+    "final_answer": "",
+    "solution": "Let N be the total number of people, N = 5 men + 9 women = 14 people.\nThe people stand equally spaced around a circle. There are 14 positions.\nTwo positions are diametrically opposite if they are k and k+7 (modulo 14).\nThere are N/2 = 7 pairs of diametrically opposite positions: (1,8), (2,9), (3,10), (4,11), (5,12), (6,13), (7,14).\n\nThe total number of ways to arrange 14 distinct people in 14 distinct positions is 14!. This is our sample space size.\n\nNow, let's determine the number of favorable arrangements.\nThe",
+    "correct": false
+  },
+  "voting": {
+    "final_answer": "2003",
+    "votes": [
+      "193",
+      "2003",
+      ""
+    ],
+    "details": [
+      {
+        "backend": "openai_mini",
+        "final_answer": "193",
+        "solution": "To solve the problem, we need to determine the probability that every man stands diametrically opposite a woman when five men and nine women are arranged in a circle.\n\n1. **Understanding the arrangement**: In a circle with 14 positions (5 men + 9 women), each position can be occupied by either a man or a woman. For every man to be diametrically opposite a woman, we can visualize the circle as having pairs of opposite positions.\n\n2. **Identifying pairs**: Since there are 14 positions, there are 7 pairs of diametrically opposite positions. We need to choose 5 of these pairs to place the men, with the remaining 2 pairs being occupied by women.\n\n3. **Choosing pairs for men**: The number of ways to choose 5 pairs from the 7 available pairs is given by the binomial coefficient \\( \\binom{7}{5} \\). This is equal to \\( \\binom{7}{2} = 21 \\).\n\n4. **Arranging men and women**: After choosing the pairs for the men, we can arrange the 5 men in the selected pairs in \\( 5! \\) ways. Similarly, the 9 women can be arranged in the remaining positions in \\( 9! \\) ways.\n\n5. **Total arrangements**: The total number of arrangements of 5 men and 9 women in the circle without any restrictions is \\( 14! \\) (since we can arrange all 14 people in any order).\n\n6. **Calculating the probability**: The probability \\( P \\) that every man stands diametrically opposite a woman is given by the ratio of the number of favorable arrangements to the total arrangements:\n   \\[\n   P = \\frac{\\text{Number of favorable arrangements}}{\\text{Total arrangements}} = \\frac{\\binom{7}{5} \\cdot 5! \\cdot 9!}{14!}\n   \\]\n\n   Substituting the values:\n   \\[\n   P = \\frac{21 \\cdot 120 \\cdot 362880}{87178291200}\n   \\]\n\n   Simplifying the numerator:\n   \\[\n   21 \\cdot 120 = 2520\n   \\]\n   \\[\n   2520 \\cdot 362880 = 915072000\n   \\]\n\n   Thus,\n   \\[\n   P = \\frac{915072000}{87178291200}\n   \\]\n\n7. **Reducing the fraction**: We simplify \\( \\frac{915072000}{87178291200} \\):\n   \\[\n   \\frac{915072000 \\div 915072000}{87178291200 \\div 915072000} = \\frac{1}{95.5} = \\frac{2}{191}\n   \\]\n\n   Here, \\( m = 2 \\) and \\( n = 191 \\) are relatively prime.\n\n8. **Finding \\( m+n \\)**:\n   \\[\n   m+n = 2 + 191 = 193\n   \\]\n\nThus, the final answer is:\n\nFINAL_ANSWER:\n193",
+        "correct": false
+      },
+      {
+        "backend": "openai_strong",
+        "final_answer": "2003",
+        "solution": "To solve the problem, we need to find the probability that every man stands diametrically opposite a woman when five men and nine women are arranged in a circle.\n\nFirst, we note that there are a total of \\(5 + 9 = 14\\) people standing in the circle. When arranged in a circle, we can fix one person to eliminate the effect of rotations. Let's fix one of the men in one position. This leaves us with \\(13\\) positions to fill with the remaining \\(4\\) men and \\(9\\) women.\n\nFor every man to be diametrically opposite a woman, we can visualize the arrangement as follows: if we place a man in one position, the position directly opposite him must be occupied by a woman. Since there are \\(5\\) men, they will occupy \\(5\\) positions, and the \\(5\\) positions directly opposite them must be occupied by \\(5\\) of the \\(9\\) women.\n\nThe arrangement can be visualized as follows:\n- Let the positions be numbered \\(1\\) to \\(14\\).\n- If we place a man in position \\(1\\), then a woman must be in position \\(8\\) (the position directly opposite).\n- Continuing this way, if we place men in positions \\(1, 3, 5, 7, 9\\), then the women must occupy positions \\(8, 10, 12, 14, 2\\) respectively.\n\nTo satisfy the condition that every man is opposite a woman, we can choose \\(5\\) positions out of the \\(14\\) for the men. The remaining \\(9\\) positions will automatically be filled by women. \n\nThe total number of ways to choose \\(5\\) positions from \\(14\\) is given by the binomial coefficient:\n\n\\[\n\\binom{14}{5}\n\\]\n\nNext, we need to determine how many of these arrangements satisfy the condition that every man is opposite a woman. Once we have chosen \\(5\\) positions for the men, there are \\(5!\\) ways to arrange the \\(5\\) men in those positions and \\(9!\\) ways to arrange the \\(9\\) women in the remaining positions.\n\nThus, the number of favorable arrangements is:\n\n\\[\n5! \\times 9!\n\\]\n\nNow, we can calculate the total number of arrangements of \\(14\\) people (without any restrictions) which is simply \\(14!\\).\n\nThe probability \\(P\\) that every man stands diametrically opposite a woman is then given by:\n\n\\[\nP = \\frac{5! \\times 9!}{14!}\n\\]\n\nWe can simplify this expression. Recall that:\n\n\\[\n14! = 14 \\times 13 \\times 12 \\times 11 \\times 10 \\times 9!\n\\]\n\nThus, we can rewrite the probability as:\n\n\\[\nP = \\frac{5!}{14 \\times 13 \\times 12 \\times 11 \\times 10}\n\\]\n\nCalculating \\(5!\\):\n\n\\[\n5! = 120\n\\]\n\nNow substituting this into our probability:\n\n\\[\nP = \\frac{120}{14 \\times 13 \\times 12 \\times 11 \\times 10}\n\\]\n\nCalculating the denominator:\n\n\\[\n14 \\times 13 = 182\n\\]\n\\[\n182 \\times 12 = 2184\n\\]\n\\[\n2184 \\times 11 = 24024\n\\]\n\\[\n24024 \\times 10 = 240240\n\\]\n\nNow we have:\n\n\\[\nP = \\frac{120}{240240}\n\\]\n\nTo simplify this fraction, we find the greatest common divisor (GCD) of \\(120\\) and \\(240240\\). The GCD is \\(120\\), so we divide both the numerator and the denominator by \\(120\\):\n\n\\[\nP = \\frac{1}{2002}\n\\]\n\nThus, we have \\(m = 1\\) and \\(n = 2002\\). Since \\(m\\) and \\(n\\) are relatively prime, we can find \\(m+n\\):\n\n\\[\nm+n = 1 + 2002 = 2003\n\\]\n\nTherefore, the final answer is:\n\nFINAL_ANSWER:\n2003",
+        "correct": false
+      },
+      {
+        "backend": "gemini",
+        "final_answer": "",
+        "solution": "Let N be the total number of people, so N = 5 men + 9 women = 14 people.\nThe people are arranged in 14 equally spaced positions around a circle. We consider the positions to be distinct (e.g., seats 1 through 14). The total number of ways to arrange 5 men (M) and 9 women (W) in these 14 distinct positions is the number of ways to choose 5 positions for the men out of 14, which is $\\binom{14}{5}$.\n\nTotal number of arrangements = $\\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times",
+        "correct": false
+      }
+    ],
+    "correct": false
+  }
+}

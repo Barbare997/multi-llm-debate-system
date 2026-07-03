@@ -1,0 +1,36 @@
+{
+  "single": {
+    "final_answer": "",
+    "solution": "Let n be the number. The digits are a, b, c.\n\nFrom the problem statement, we can write n in base 10 using the given base representations:\n1.  n in base 14 as abc:\n    n = a * 14^2 + b * 14^1 + c * 14^0\n    n = 196a + 14b + c\n\n2.  n in base 15 as acb:\n    n = a * 15^2 + c * 15^1 + b * 15^0\n    n = 225a + 15c + b\n\n3.  n in base 6 as acac:\n    n = a * 6^3 + c * 6^2 + a * 6^1 + c * 6^0\n    n = 216a + 36c + 6a + c\n    n = 222a + 37c\n\nNext, we establish the constraints on the digits a, b, c.\n*   For (abc)_14, the digits a, b, c must be less than 14 (0 to 13).\n*   For (acb)_15, the digits a, c, b must be less than 15 (0 to 14).\n*   For (acac)_6, the digits a, c must be less than 6 (0 to 5).\n*   The problem states a > 0.\n\nCombining these constraints:\n*   From (acac)_6, a and c must be in {0, 1, 2, 3, 4, 5}.\n*   Given a > 0, so a must be in {1, 2, 3, 4, 5}.\n*   From (abc)_14 and (acb)_15, b must be less than 14 and 15, so b must be in {0, 1, ..., 13}.\n\nNow we have a system of equations for n:\n(1) n = 196a + 14b + c\n(2) n = 225a + 15c + b\n(3) n = 222a + 37c\n\nLet's equate (1) and (2):\n196a + 14b + c = 225a + 15c + b\n13b - 14c = 29a  (",
+    "correct": false
+  },
+  "voting": {
+    "final_answer": "",
+    "votes": [
+      "925",
+      "",
+      ""
+    ],
+    "details": [
+      {
+        "backend": "openai_mini",
+        "final_answer": "925",
+        "solution": "To solve for the number \\( n \\) that can be represented in different bases as described, we will first express \\( n \\) in terms of its digits in each base.\n\n1. **Base 14 Representation**:\n   \\[\n   n = a \\cdot 14^2 + b \\cdot 14^1 + c \\cdot 14^0 = 196a + 14b + c\n   \\]\n\n2. **Base 15 Representation**:\n   \\[\n   n = a \\cdot 15^2 + c \\cdot 15^1 + b \\cdot 15^0 = 225a + 15c + b\n   \\]\n\n3. **Base 6 Representation**:\n   \\[\n   n = a \\cdot 6^3 + c \\cdot 6^2 + a \\cdot 6^1 + c \\cdot 6^0 = 216a + 36c + 6a + c = 222a + 37c\n   \\]\n\nNow we have three expressions for \\( n \\):\n1. \\( n = 196a + 14b + c \\)\n2. \\( n = 225a + 15c + b \\)\n3. \\( n = 222a + 37c \\)\n\nNext, we will set the first two expressions equal to each other:\n\\[\n196a + 14b + c = 225a + 15c + b\n\\]\nRearranging gives:\n\\[\n196a + 14b + c - 225a - 15c - b = 0\n\\]\n\\[\n-29a + 13b - 14c = 0 \\quad \\text{(1)}\n\\]\n\nNow we set the second and third expressions equal to each other:\n\\[\n225a + 15c + b = 222a + 37c\n\\]\nRearranging gives:\n\\[\n225a + 15c + b - 222a - 37c = 0\n\\]\n\\[\n3a + b - 22c = 0 \\quad \\text{(2)}\n\\]\n\nNow we have a system of equations:\n1. \\( -29a + 13b - 14c = 0 \\)\n2. \\( 3a + b - 22c = 0 \\)\n\nFrom equation (2), we can express \\( b \\) in terms of \\( a \\) and \\( c \\):\n\\[\nb = 22c - 3a \\quad \\text{(3)}\n\\]\n\nSubstituting (3) into (1):\n\\[\n-29a + 13(22c - 3a) - 14c = 0\n\\]\nExpanding gives:\n\\[\n-29a + 286c - 39a - 14c = 0\n\\]\nCombining like terms:\n\\[\n-68a + 272c = 0\n\\]\nThis simplifies to:\n\\[\n68a = 272c \\quad \\Rightarrow \\quad a = 4c \\quad \\text{(4)}\n\\]\n\nNow substituting (4) back into (3) to find \\( b \\):\n\\[\nb = 22c - 3(4c) = 22c - 12c = 10c\n\\]\n\nNow we have:\n- \\( a = 4c \\)\n- \\( b = 10c \\)\n\nSince \\( a, b, c \\) are digits in their respective bases, we need to ensure they are valid digits:\n- In base 14: \\( a < 14 \\), \\( b < 14 \\), \\( c < 14 \\)\n- In base 15: \\( a < 15 \\), \\( b < 15 \\), \\( c < 15 \\)\n- In base 6: \\( a < 6 \\), \\( c < 6 \\)\n\nFrom \\( a = 4c \\), since \\( a \\) must be less than 6, we can have \\( c = 1 \\) (then \\( a = 4 \\)) or \\( c = 0 \\) (not allowed since \\( a > 0 \\)). \n\nThus, if \\( c = 1 \\):\n- \\( a = 4 \\)\n- \\( b = 10 \\)\n\nNow we can calculate \\( n \\):\nUsing the base 14 representation:\n\\[\nn = 196(4) + 14(10) + 1 = 784 + 140 + 1 = 925\n\\]\n\nFinally, we verify that this \\( n \\) satisfies the other base representations:\n- Base 15: \\( n = 225(4) + 15(1) + 10 = 900 + 15 + 10 = 925 \\)\n- Base 6: \\( n = 222(4) + 37(1) = 888 + 37 = 925 \\)\n\nThus, the base-10 representation of \\( n \\) is:\n\\[\n\\boxed{925}\n\\]\n\nFINAL_ANSWER:\n925",
+        "correct": true
+      },
+      {
+        "backend": "openai_strong",
+        "final_answer": "",
+        "solution": "We are given that the number \\( n \\) can be represented in different bases as follows:\n\n1. In base 14, \\( n = abc \\).\n2. In base 15, \\( n = acb \\).\n3. In base 6, \\( n = acac \\).\n\nWe need to find the base-10 representation of \\( n \\).\n\n### Step 1: Express \\( n \\) in terms of \\( a, b, c \\) for each base.\n\n1. **Base 14:**\n   \\[\n   n = 14^2 \\cdot a + 14 \\cdot b + c\n   \\]\n\n2. **Base 15:**\n   \\[\n   n = 15^2 \\cdot a + 15 \\cdot c + b\n   \\]\n\n3. **Base 6:**\n   \\[\n   n = 6^3 \\cdot a + 6^2 \\cdot c + 6 \\cdot a + c = 216a + 36c + 6a + c = 222a + 37c\n   \\]\n\n### Step 2: Set up equations based on the expressions.\n\nFrom the base 14 and base 15 representations, we have:\n\\[\n14^2 \\cdot a + 14 \\cdot b + c = 15^2 \\cdot a + 15 \\cdot c + b\n\\]\n\nSimplifying, we get:\n\\[\n196a + 14b + c = 225a + 15c + b\n\\]",
+        "correct": false
+      },
+      {
+        "backend": "gemini",
+        "final_answer": "",
+        "solution": "Let n be the number. The digits are a, b, c.\nThe problem states that a > 0.\nThe number n can be written in base 14 as abc. This means n = a * 14^2 + b * 14^1 + c * 14^0.\nn = 196a + 14b + c.\nFor these digits to be valid in base 14, we must have a, b, c < 14.\n\nThe number n can be written in base 15 as acb. This means n = a * 15^2 + c * 15^1 + b * 15^0.\nn = 225a + 15c + b.\nFor these digits to be valid in base 15, we must have a, c, b < 15.\n\nThe number n can be written in base 6 as acac. This means n = a * 6^3 + c * 6^2 + a * 6^1 + c * 6^0.\nn = 216a + 36c + 6a + c.\nn = 222a + 37c.\nFor these digits to be valid in base 6, we must have a, c < 6.\n\nCombining the digit constraints:\n1. From base 6 representation (acac): a < 6 and c < 6.\n2. From base 14 representation (abc): a < 14, b < 14, c < 14.\n3. From base 15 representation (acb): a < 15, c < 15, b < 15.\nAlso, we are given a > 0.\n\nSo, the combined constraints on a, b, c are:\n1 <= a <= 5 (since a > 0 and a < 6)\n0 <= c <= 5 (since c < 6)\n0 <= b <= 13 (since b < 14 and b < 15)\n\nNow we set up a system of equations using the base-10 expressions for n:\n(1) 196a + 14b + c = n\n(2) 225a + 15c + b = n\n(3) 222a + 37c = n\n\nEquating (1) and (2",
+        "correct": false
+      }
+    ],
+    "correct": false
+  }
+}
